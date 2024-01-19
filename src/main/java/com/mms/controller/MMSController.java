@@ -17,33 +17,33 @@ import org.springframework.web.bind.annotation.RestController;
 import com.mms.bean.Movie;
 import com.mms.dao.MovieDAO;
 
-@RestController
-@CrossOrigin("http://localhost:4200/")
+//@RestController
+//@CrossOrigin("http://localhost:4200/")
 public class MMSController {
     
-    @Autowired
+    //@Autowired
     MovieDAO dao;
     
-    @PostMapping("/PerformInsert")
+    //@PostMapping("/PerformInsert")
     public String performInsert(@RequestBody Movie mov) {
         dao.save(mov);
         return "Inserted";
     }
     
-    @PutMapping("/PerformUpdate")
+    //@PutMapping("/PerformUpdate")
     public String performUpdate(@RequestBody Movie mov) {
         dao.save(mov);
         return "Updated";
     }
     
-    @DeleteMapping("/PerformDelete/{movieId}")
+    //@DeleteMapping("/PerformDelete/{movieId}")
     public String performDelete(@PathVariable int movieId) {
         dao.deleteById(movieId);
         return "Deleted";
     }
     
     
-    @GetMapping("/ViewAll")
+    //@GetMapping("/ViewAll")
     public List<Movie> getAllMovieDetails(){
         Iterator<Movie> it=dao.findAll().iterator();
         ArrayList<Movie> list=new ArrayList<>();

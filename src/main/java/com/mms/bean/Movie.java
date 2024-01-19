@@ -5,12 +5,12 @@ import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
-//@Entity
+@Entity
 
-//@Table(name="tbl_mms")
+@Table(name="tbl_mms")
 public class Movie {
 
-	//@Id
+	@Id
 	@Column(name="id")
 	private int id;
 	
@@ -23,7 +23,7 @@ public class Movie {
 	@Column(name="language")
 	private String language;
 	
-	//@Column(name="duration")
+	@Column(name="duration")
 	private String duration;
 	
 	
@@ -69,7 +69,7 @@ public class Movie {
 	public void setDuration(String duration) {
 		this.duration = duration;
 	}
-	//@Override
+	@Override
 	public String toString() {
 		return "Movie [id=" + id + ", name=" + name + ", type=" + type + ", language=" + language + ", duration="
 				+ duration + "]";
